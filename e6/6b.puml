@@ -1,0 +1,16 @@
+@startuml 6b
+start
+:Nhập số nguyên dương n;
+if (n <= 0) then (Yes)
+    :In thông báo "n phải là số nguyên dương!";
+    stop
+else (No)
+    :Khởi tạo biến sum = 0;
+    while (n > 0) is (Yes)
+        :sum = sum + (n % 10);
+        :n =  Math.floor(n / 10);
+    endwhile (No)
+    :In ra tổng các chữ số của n: sum;
+    stop
+end
+@enduml

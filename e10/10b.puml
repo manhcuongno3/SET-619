@@ -1,0 +1,7 @@
+@startuml 10b
+start
+:Nhập a và b;
+:gcd = findGCD(a, b);
+:In ra Math.abs(a * b) / gcd;
+stop
+@enduml

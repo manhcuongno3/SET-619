@@ -1,0 +1,18 @@
+@startuml 4
+start
+:Nhập chuỗi ký tự;
+if (chuỗi rỗng?) then (Yes)
+:In thông báo "Chuỗi rỗng!";
+stop
+else (No)
+:Set strWithoutSpaces = "";
+:Set i = 0;
+while (i < length of chuỗi?) is (Yes)
+    if (chuỗi[i] != " ") then (Yes)
+        :Thêm chuỗi[i] vào strWithoutSpaces;
+    endif
+    :i = i + 1;
+endwhile (No)
+:In ra strWithoutSpaces;
+stop
+@enduml

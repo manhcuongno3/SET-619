@@ -1,0 +1,15 @@
+@startuml 8b
+start
+:Nhập chuỗi ký tự;
+:Nhập ký tự cần đếm;
+:Khởi tạo biến count = 0;
+:Khởi tạo biến i = 0;
+while (i < chuỗi.length) is (Yes)
+    if( chuỗi[i] == ký tự cần đếm) then (yes)
+        :count = count + 1;
+    endif
+    : i += 1;
+endwhile (No)
+:In ra số lần xuất hiện của ký tự: count;
+stop
+@enduml

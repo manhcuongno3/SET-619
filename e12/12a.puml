@@ -1,0 +1,19 @@
+@startuml 12a
+start
+:Nhập mảng 2 chiều n;
+:set max = n[0][0];
+:set i = 0;
+:set j = 0;
+while (i < n.length) is (Yes)
+    while (j < n[i].length) is (Yes)
+        if (n[i][j] > max) then (Yes)
+            :set max = n[i][j];
+        endif
+        :set j = j + 1;
+    endwhile (No)
+    :set j = 0;
+    :set i = i + 1;
+endwhile (No)
+:In ra max;
+stop
+@enduml

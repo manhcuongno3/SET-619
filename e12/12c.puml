@@ -1,0 +1,22 @@
+@startuml 12c
+start
+:Nhập mảng 2 chiều n;
+:Nhập  k (thứ tự hàng hoặc cột);
+:Nhập type (row or col) (tổng của hàng hoặc cột dựa vào k);
+:set sum = 0;
+if (type == 'row') then (Yes)
+    :set i = 0;
+    while (i < n[k].length) is (Yes)
+        :sum = sum + n[k][i];
+        :set i = i + 1;
+    endwhile (No)
+elseif (type == 'column') then (Yes)
+    :set i = 0;
+    while (i < n.length) is (Yes)
+        :sum = sum + n[i][k];
+        :set i = i + 1;
+    endwhile (No)
+endif
+:In ra sum;
+stop
+@enduml

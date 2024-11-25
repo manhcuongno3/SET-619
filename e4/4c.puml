@@ -1,0 +1,20 @@
+@startuml 4c
+start
+:Nhập chuỗi ký tự;
+if (chuỗi rỗng?) then (Yes)
+:In thông báo "Chuỗi rỗng!";
+stop
+else (No)
+:Set i = 0;
+:Set j = length of chuỗi - 1;
+while (i < j?) is (Yes)
+    if (chuỗi[i] != chuỗi[j]) then (Yes)
+        :In thông báo "Chuỗi không phải là chuỗi đối xứng!";
+        stop
+    endif
+    :Tăng i lên 1;
+    :Giảm j đi 1;
+endwhile (No)
+:In thông báo "Chuỗi là chuỗi đối xứng!";
+stop
+@enduml

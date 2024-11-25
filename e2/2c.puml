@@ -1,0 +1,18 @@
+@startuml 2c
+start
+:Nhập dãy số nguyên dương n (n > 100000);
+if (n <= 100000?) then (Yes)
+:In thông báo lỗi: "n phải là số nguyên dương lớn hơn 100000";
+stop
+else (No)
+:Set minDigit = 9; 
+while (n > 0?) is (Yes)
+:Set digit = n % 10;
+if (digit < minDigit?) then (Yes)
+:Set minDigit = digit;
+endif
+:n = Math.floor(n / 10);
+endwhile (No)
+:In số nhỏ nhất minDigit;
+stop
+@enduml

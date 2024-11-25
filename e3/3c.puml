@@ -1,0 +1,16 @@
+@startuml 3c
+start
+:Nhập số nguyên dương n;
+if (n <= 0?) then (Yes)
+:In thông báo "n phải là số nguyên dương";
+stop
+else (No)
+:Set sqrtN = Math.sqrt(n);
+if (sqrtN * sqrtN == n?) then (Yes)
+:In thông báo "n là số chính phương";
+stop
+else (No)
+:In thông báo "n không phải là số chính phương";
+stop
+endif
+@enduml

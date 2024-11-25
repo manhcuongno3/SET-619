@@ -1,0 +1,16 @@
+@startuml 4a
+start
+:Nhập chuỗi ký tự;
+if (chuỗi rỗng?) then (Yes)
+:In thông báo "Chuỗi rỗng!";
+stop
+else (No)
+:Set reversed = "";
+:Set i = length of chuỗi - 1;
+while (i >= 0?) is (Yes)
+    :Thêm chuỗi[i] vào reversed;
+    :i = i-1;
+endwhile (No)
+:In ra reversed;
+stop
+@enduml

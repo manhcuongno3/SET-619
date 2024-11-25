@@ -1,0 +1,20 @@
+@startuml 5
+start
+:Nhập mảng số nguyên;
+:Set n = chiều dài mảng;
+:Set i = 0;
+while (i < n - 1) is (Yes)
+    :Set j = 0;
+    while (j < n - i - 1) is (Yes)
+        if (arr[j] > arr[j + 1]) then (Yes)
+            :temp = arr[j];
+            :arr[j] = arr[j + 1];
+            :arr[j + 1] = temp;
+        endif
+        : j += 1;
+    endwhile (No)
+    : i += 1;
+endwhile (No)
+:In ra mảng đã sắp xếp;
+stop
+@enduml

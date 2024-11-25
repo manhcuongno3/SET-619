@@ -1,0 +1,19 @@
+@startuml 12b
+start
+:Nhập mảng 2 chiều n;
+:set min = n[0][0];
+:set i = 0;
+:set j = 0;
+while (i < n.length) is (Yes)
+    while (j < n[i].length) is (Yes)
+        if (n[i][j] < min) then (Yes)
+            :set min = n[i][j];
+        endif
+        :set j = j + 1;
+    endwhile (No)
+    :set j = 0;
+    :set i = i + 1;
+endwhile (No)
+:In ra min;
+stop
+@enduml

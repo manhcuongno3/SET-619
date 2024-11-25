@@ -1,0 +1,23 @@
+@startuml 3b
+start
+:Nhập số nguyên dương n;
+if (n <= 1?) then (Yes)
+:In thông báo "n phải là số nguyên dương lớn hơn 1";
+stop
+else (No)
+:Set sum = 0;
+:Set i = 1;
+while (i < n?) is (Yes)
+if (n % i == 0?) then (Yes)
+:Set sum = sum + i;
+endif
+:Set i = i + 1;
+endwhile (No)
+if (sum == n?) then (Yes)
+:In thông báo "n là số hoàn hảo";
+stop
+else (No)
+:In thông báo "n không phải là số hoàn hảo";
+stop
+endif
+@enduml

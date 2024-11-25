@@ -1,0 +1,18 @@
+@startuml 2a
+start
+:Nhập dãy số nguyên dương n (n > 100000);
+if (n <= 100000?) then (Yes)
+:In thông báo lỗi: "n phải là số nguyên dương lớn hơn 100000";
+stop
+else (No)
+:Set maxDigit = 0;
+while (n > 0?) is (Yes)
+:Set digit = n % 10;
+if (digit > maxDigit?) then (Yes)
+:maxDigit = digit;
+endif
+:n = Math.floor(n / 10);
+endwhile (No)
+:In chữ số lớn nhất maxDigit;
+stop
+@enduml

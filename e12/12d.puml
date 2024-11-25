@@ -1,0 +1,17 @@
+@startuml 12d
+start
+:Nhập mảng 2 chiều n;
+:set i = 0;
+:set j = 0;
+while (i < n.length) is (Yes)
+    while (j < n[i].length) is (Yes)
+        if (isPrime(n[i][j])) then (Yes)
+            :In ra n[i][j];
+        endif
+        :set j = j + 1;
+    endwhile (No)
+    :set j = 0;
+    :set i = i + 1;
+endwhile (No)
+stop
+@enduml

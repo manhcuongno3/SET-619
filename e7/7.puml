@@ -1,0 +1,21 @@
+@startuml 7
+start
+:Nhập số nguyên dương n;
+if (n <= 0) then (Yes)
+    :In thông báo "n phải là số nguyên dương!";
+    stop
+else (No)
+    :Khởi tạo a = 0, b = 1;
+    :In ra a (số đầu tiên của dãy Fibonacci);
+    :In ra b (số thứ hai của dãy Fibonacci);
+    :Set i = 2;
+    while (i < n) is (Yes)
+        :nextTerm = a + b;
+        :In ra nextTerm;
+        :a = b;
+        :b = nextTerm;
+        : i += 1;
+    endwhile (No)
+    stop
+end
+@enduml

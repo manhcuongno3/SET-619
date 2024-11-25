@@ -1,0 +1,11 @@
+@startuml 10a
+start
+:Nhập a và b;
+while (b != 0) is (Yes)
+    :let temp = a % b;
+    :a = b;
+    :b = temp;
+endwhile (No)
+:In ra a;
+stop
+@enduml

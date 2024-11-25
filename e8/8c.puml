@@ -1,0 +1,18 @@
+@startuml 8c
+start
+:Nhập chuỗi ký tự str;
+:Khởi tạo biến maxCount = 0;
+:Khởi tạo biến maxChar = '';
+:Khởi tạo biến i = 0;
+while (i < str.length) is (Yes)
+    :let currentChar = str[i];
+    :count = countCharOccurrences(str, currentChar);
+    if (count > maxCount) then (Yes)
+        :maxCount = count;
+        :maxChar = currentChar;
+    endif
+    : i += 1;
+endwhile (No)
+:In ra ký tự xuất hiện nhiều nhất: maxChar;
+stop
+@enduml

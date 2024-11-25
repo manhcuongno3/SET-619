@@ -1,0 +1,29 @@
+@startuml 9b
+start
+:Nhập chuỗi ký tự str;
+:Nhập type (incresase hoặc decrease);
+:let arr = str.split('');
+:Khởi tạo biến i = 0;
+while (i < str.length) is (Yes)
+    :Khởi tạo biến minMaxIndex = i;
+    :Khởi tạo biến j = i + 1;
+    while (j < str.length) is (Yes)
+        if (type == "incresase") then (Yes)
+            if (str[j] < str[minMaxIndex]) then (Yes)
+                :minMaxIndex = j;
+            endif
+        else (No)
+            if (str[j] > str[minMaxIndex]) then (Yes)
+                :minMaxIndex = j;
+            endif
+        endif
+        : j += 1;
+    endwhile (No)
+    :let temp = arr[i];
+    :arr[i] = arr[minMaxIndex];
+    :arr[minMaxIndex] = temp;
+    : i += 1;
+endwhile (No)
+:In ra chuỗi đã sắp xếp arr.join('');
+stop
+@enduml

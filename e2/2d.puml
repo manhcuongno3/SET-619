@@ -1,0 +1,19 @@
+@startuml 2d
+start
+:Nhập dãy số nguyên dương n (n > 100000);
+if (n <= 100000?) then (Yes)
+:In thông báo lỗi: "n phải là số nguyên dương lớn hơn 100000";
+stop
+else (No)
+:Set primeNumbers = [] ;
+while (n > 0?) is (Yes)
+:Set digit = n % 10;
+if (digit > 1 and isPrime(digit)?) then (Yes)
+:Thêm digit vào primeNumbers;
+endif
+:n = Math.floor(n / 10);
+endwhile (No)
+:In ra tất cả các số nguyên tố trong primeNumbers;
+stop
+
+@enduml

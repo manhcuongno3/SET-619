@@ -1,0 +1,37 @@
+
+@startuml 9a
+start
+:Nhập chuỗi ký tự hoặc dãy số str;
+:Nhập type (increase hoặc decrease);
+:Khởi tạo biến maxLength = 1;
+:Khởi tạo biến currentLength = 1;
+:Khởi tạo biến startIndex = 0;
+:Khởi tạo biến maxSubsequence = '';
+:Khởi tạo biến i = 1;
+while (i < str.length) is (Yes)
+    if (type == "increase") then (Yes)
+        if (str[i] > str[i - 1]) then (Yes)
+            :currentLength++;
+        else (No)
+            if (currentLength > maxLength) then (Yes)
+                :maxLength = currentLength;
+                :maxSubsequence = str.substr(i - currentLength, currentLength);
+            endif
+            :currentLength = 1;
+        endif
+    else (No)
+        if (str[i] < str[i - 1]) then (Yes)
+            :currentLength++;
+        else (No)
+            if (currentLength > maxLength) then (Yes)
+                :maxLength = currentLength;
+                :maxSubsequence = str.substr(i - currentLength, currentLength);
+            endif
+            :currentLength = 1;
+        endif
+    endif
+    : i += 1;
+endwhile (No)
+:In ra dãy con dài nhất: maxSubsequence;
+stop
+@enduml

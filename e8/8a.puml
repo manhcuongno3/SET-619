@@ -1,0 +1,15 @@
+@startuml 8a
+start
+:Nhập chuỗi ký tự;
+:Khởi tạo biến count = 0;
+:Khởi tạo biến vowels = "aeiouAEIOU";
+:Khởi tạo biến i = 0;
+while (i < chuỗi.length) is (Yes)
+    if (vowels.indexOf(str[i]) !== -1) then (yes)
+        :count = count + 1;
+    endif
+    : i += 1;
+endwhile (No)
+:In ra số nguyên âm trong chuỗi: count;
+stop
+@enduml

@@ -1,0 +1,18 @@
+@startuml 1d
+start
+:Nhập số nguyên dương n;
+if (n < 1 or n >= 1000?) then (Yes)
+:In thông báo lỗi: "n phải là số nguyên dương nhỏ hơn 1000";
+stop
+else (No)
+:Set maxDigit = 0;
+while (n > 0?) is (Yes)
+:Set digit = n % 10;
+if (digit > maxDigit?) then (Yes)
+:maxDigit = digit;
+endif
+:n = Math.floor(n / 10);
+endwhile (No)
+:In chữ số lớn nhất maxDigit;
+stop
+@enduml

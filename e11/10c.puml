@@ -1,0 +1,12 @@
+@startuml 10a
+start
+:Nhập mảng n;
+:set sum = 0;
+:set i = 0;
+while (i < n.length) is (Yes)
+  :set sum = sum + i;
+:set i = i + 1;
+endwhile (No)
+:In ra sum;
+stop
+@enduml

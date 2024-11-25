@@ -1,0 +1,16 @@
+@startuml 3d
+start
+:Nhập số nguyên dương n;
+if (n <= 1?) then (Yes)
+:In thông báo "n phải là số nguyên dương lớn hơn 1";
+stop
+else (No)
+:Set i = 2;
+while (i <= n?) is (Yes)
+    if (isPrime(i)) then (Yes)
+        :print i;
+    endif
+    :i = i + 1;
+endwhile (No)
+stop
+@enduml
