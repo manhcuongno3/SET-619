@@ -23,7 +23,7 @@ function isPrime(n) {
   return true;
 }
 
-function isPerfect(n) {
+function isPerfectNumber(n) {
   if (n <= 1) {
       console.log("n phải là số nguyên dương lớn hơn 1");
       return false;
@@ -48,7 +48,7 @@ function isPerfect(n) {
   }
 }
 
-function isPerfectSquare(n) {
+function isPerfectSquareNumber(n) {
   if (n <= 0) {
       console.log("n phải là số nguyên dương");
       return false;

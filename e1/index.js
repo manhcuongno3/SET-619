@@ -59,7 +59,7 @@ function sumOfDigits(n) {
   return total;
 }
 
-function largestDigit(n) {
+function findLargestDigit(n) {
   if (n < 1 || n >= 1000) {
       console.error("n phải là số nguyên dương nhỏ hơn 1000");
       return;

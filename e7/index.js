@@ -1,5 +1,5 @@
 // Nhập một số nguyên dương n, in ra n số đầu tiên của dãy Fibonacci
-function fibonacci(n) {
+function printFibonacci(n) {
   if (n <= 0) {
       console.log("n phải là số nguyên dương!");
       return;

@@ -59,7 +59,7 @@ function isPalindrome(str) {
   console.log("Chuỗi là chuỗi đối xứng!");
 }
 
-function longestPalindromeSubstring(str) {
+function findLongestPalindromeSubstring(str) {
   if (str === "") {
       console.log("Chuỗi rỗng!");
       return;

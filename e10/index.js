@@ -2,7 +2,7 @@
 // a) Tìm ước chung lớn nhất.
 // b) Tìm bội chung nhỏ nhất.
 
-function findGCD(a, b) {
+function findGreatestCommonDivisor(a, b) {
   while (b !== 0) {
       let temp = a % b;
       a = b;
@@ -11,7 +11,7 @@ function findGCD(a, b) {
   return a;
 }
 
-function findLCM(a, b) {
+function findLeastCommonMultiple(a, b) {
   const gcd = findGCD(a, b);
   return Math.abs(a * b) / gcd;
 }

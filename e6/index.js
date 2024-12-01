@@ -2,7 +2,7 @@
 // a) Tính và in ra giai thừa của n.
 // b) Tính và in ra tổng các chữ số của n.
 
-function factorial(n) {
+function caculateFactorial(n) {
   if (n <= 0) {
       console.log("n phải là số nguyên dương!");
       return;

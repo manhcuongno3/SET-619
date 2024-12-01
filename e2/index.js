@@ -4,7 +4,7 @@
 // ' c) Tìm và in ra số nhỏ nhất.
 // ' d) Tìm và in ra tất cả các số nguyên tố trong dãy.
 
-function largestDigit(n) {
+function findLargestDigit(n) {
   if (n <= 100000) {
       console.error("n phải là số nguyên dương lớn hơn 100000");
       return;
@@ -24,7 +24,7 @@ function largestDigit(n) {
   return maxDigit;
 }
 
-function secondLargestDigit(n) {
+function findSecondLargestDigit(n) {
   if (n <= 100000) {
       console.error("n phải là số nguyên dương lớn hơn 100000");
       return;
@@ -52,7 +52,7 @@ function secondLargestDigit(n) {
   return secondMaxDigit;
 }
 
-function smallestDigit(n) {
+function findSmallestDigit(n) {
     if (n <= 100000) {
         console.error("n phải là số nguyên dương lớn hơn 100000");
         return;
