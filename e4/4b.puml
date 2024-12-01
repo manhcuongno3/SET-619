@@ -5,14 +5,14 @@ if (chuỗi rỗng?) then (Yes)
 :In thông báo "Chuỗi rỗng!";
 stop
 else (No)
-:Set strWithoutSpaces = "";
+:Set stringWithoutSpaces = "";
 :Set i = 0;
 while (i < length of chuỗi?) is (Yes)
     if (chuỗi[i] != " ") then (Yes)
-        :Thêm chuỗi[i] vào strWithoutSpaces;
+        :Thêm chuỗi[i] vào stringWithoutSpaces;
     endif
     :i = i + 1;
 endwhile (No)
-:In ra strWithoutSpaces;
+:In ra stringWithoutSpaces;
 stop
 @enduml

@@ -6,20 +6,17 @@
 
 function isPrime(n) {
   if (n <= 1) {
-      console.log("n phải là số nguyên dương lớn hơn 1");
       return false;
   }
 
   let i = 2;
   while (i <= Math.sqrt(n)) {
       if (n % i === 0) {
-          console.log("n không phải là số nguyên tố");
           return false;
       }
       i++;
   }
 
-  console.log("n là số nguyên tố");
   return true;
 }
 
@@ -63,19 +60,6 @@ function isPerfectSquareNumber(n) {
       console.log("n không phải là số chính phương");
       return false;
   }
-}
-
-function isPrime(n) {
-    if (n <= 1) {
-        return false;
-    }
-
-    for (let i = 2; i <= Math.sqrt(n); i++) {
-        if (n % i === 0) {
-            return false;
-        }
-    }
-    return true;
 }
 
 function printPrimesUpToN(n) {

@@ -4,51 +4,51 @@
 // c) Kiểm tra chuỗi đối xứng.
 // d) Tìm dãy con đối xứng dài nhất.
 
-function reverseString(str) {
-  if (str === "") {
+function reverseString(string) {
+  if (string === "") {
       console.log("Chuỗi rỗng!");
       return;
   }
 
   let reversed = "";
-  let i = str.length - 1;
+  let i = string.length - 1;
 
   while (i >= 0) {
-      reversed += str[i];
+      reversed += string[i];
       i--;
   }
 
   console.log("Chuỗi đảo ngược là:", reversed);
 }
 
-function removeSpaces(str) {
-  if (str === "") {
+function removeSpaces(string) {
+  if (string === "") {
       console.log("Chuỗi rỗng!");
       return;
   }
 
-  let strWithoutSpaces = "";
+  let stringWithoutSpaces = "";
   
-  for (let i = 0; i < str.length; i++) {
-      if (str[i] !== " ") {
-          strWithoutSpaces += str[i]
+  for (let i = 0; i < string.length; i++) {
+      if (string[i] !== " ") {
+          stringWithoutSpaces += string[i]
       }
   }
 
-  console.log("Chuỗi sau khi xóa khoảng trắng là:", strWithoutSpaces);
+  console.log("Chuỗi sau khi xóa khoảng trắng là:", stringWithoutSpaces);
 }
 
-function isPalindrome(str) {
-  if (str === "") {
+function isPalindrome(string) {
+  if (string === "") {
       console.log("Chuỗi rỗng!");
       return;
   }
 
   let i = 0;
-  let j = str.length - 1;
+  let j = string.length - 1;
 
   while (i < j) {
-      if (str[i] !== str[j]) {
+      if (string[i] !== string[j]) {
           console.log("Chuỗi không phải là chuỗi đối xứng!");
           return;
       }
@@ -59,18 +59,18 @@ function isPalindrome(str) {
   console.log("Chuỗi là chuỗi đối xứng!");
 }
 
-function findLongestPalindromeSubstring(str) {
-  if (str === "") {
+function findLongestPalindromeSubstring(string) {
+  if (string === "") {
       console.log("Chuỗi rỗng!");
       return;
   }
 
   let maxLength = 1;
-  let maxSubstring = str[0];
+  let maxSubstring = string[0];
 
-  for (let i = 0; i < str.length; i++) {
-      for (let j = str.length - 1; j >= i; j--) {
-          const substring = str.slice(i, j + 1);
+  for (let i = 0; i < string.length; i++) {
+      for (let j = string.length - 1; j >= i; j--) {
+          const substring = string.slice(i, j + 1);
           if (isPalindrome(substring) && (j - i + 1) > maxLength) {
               maxLength = j - i + 1;
               maxSubstring = substring;

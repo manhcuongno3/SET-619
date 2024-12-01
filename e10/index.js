@@ -12,6 +12,6 @@ function findGreatestCommonDivisor(a, b) {
 }
 
 function findLeastCommonMultiple(a, b) {
-  const gcd = findGCD(a, b);
-  return Math.abs(a * b) / gcd;
+  const greatestCommonDivisor = findGreatestCommonDivisor(a, b);
+  return Math.abs(a * b) / greatestCommonDivisor;
 }

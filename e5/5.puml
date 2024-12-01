@@ -6,10 +6,10 @@ start
 while (i < n - 1) is (Yes)
     :Set j = 0;
     while (j < n - i - 1) is (Yes)
-        if (arr[j] > arr[j + 1]) then (Yes)
-            :temp = arr[j];
-            :arr[j] = arr[j + 1];
-            :arr[j + 1] = temp;
+        if (array[j] > array[j + 1]) then (Yes)
+            :temp = array[j];
+            :array[j] = array[j + 1];
+            :array[j + 1] = temp;
         endif
         : j += 1;
     endwhile (No)

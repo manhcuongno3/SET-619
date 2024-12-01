@@ -59,10 +59,10 @@ function sumRowOrColumn(n, k, type) {
   return sum;
 }
 
-function isPrime(num) {
-  if (num <= 1) return false;
-  for (let i = 2; i <= Math.sqrt(num); i++) {
-      if (num % i === 0) return false;
+function isPrime(number) {
+  if (number <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+      if (number % i === 0) return false;
   }
   return true;
 }
@@ -74,9 +74,9 @@ function findPrimesIn2DArray(n) {
 
   while (i < n.length) {
       while (j < n[i].length) {
-          let num = n[i][j];
-          if (isPrime(num)) {
-              primes.push(num);
+          let number = n[i][j];
+          if (isPrime(number)) {
+              primes.push(number);
           }
           j++;
       }

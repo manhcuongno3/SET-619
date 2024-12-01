@@ -2,26 +2,26 @@
 // a) Tìm dãy con tăng/giảm dài nhất.
 // b) Sắp xếp ký tự theo thứ tự tăng/giảm và in ra.
 
-function findLongestSubsequence(arr, type) {
+function findLongestSubsequence(array, type) {
   let maxLength = 1;       
   let currentLength = 1;   
-  let maxSubsequence = arr[0]; 
-  let currentSubsequence = arr[0];
+  let maxSubsequence = array[0]; 
+  let currentSubsequence = array[0];
   
-  for (let i = 1; i < arr.length; i++) {
-      if (type === "tăng" && arr[i] > arr[i - 1]) {
+  for (let i = 1; i < array.length; i++) {
+      if (type === "incresase" && array[i] > array[i - 1]) {
           currentLength++;
-          currentSubsequence += arr[i];
-      } else if (type === "giảm" && arr[i] < arr[i - 1]) {
+          currentSubsequence += array[i];
+      } else if (type === "decrease" && array[i] < array[i - 1]) {
           currentLength++;
-          currentSubsequence += arr[i];
+          currentSubsequence += array[i];
       } else {
           if (currentLength > maxLength) {
               maxLength = currentLength;
               maxSubsequence = currentSubsequence;
           }
           currentLength = 1;
-          currentSubsequence = arr[i];
+          currentSubsequence = array[i];
       }
   }
 
@@ -33,28 +33,28 @@ function findLongestSubsequence(arr, type) {
   return maxSubsequence;
 }
 
-function sortString(str, type) {
-  let arr = str.split('');
-  let n = arr.length;
+function sortString(string, type) {
+  let array = string.split('');
+  let n = array.length;
 
   for (let i = 0; i < n; i++) {
       let minMaxIndex = i;
       for (let j = i + 1; j < n; j++) {
-          if (type === "tăng") {
-              if (arr[j] < arr[minMaxIndex]) {
+          if (type === "incresase") {
+              if (array[j] < array[minMaxIndex]) {
                   minMaxIndex = j;
               }
           } else {
-              if (arr[j] > arr[minMaxIndex]) {
+              if (array[j] > array[minMaxIndex]) {
                   minMaxIndex = j;
               }
           }
       }
 
-      let temp = arr[i];
-      arr[i] = arr[minMaxIndex];
-      arr[minMaxIndex] = temp;
+      let temp = array[i];
+      array[i] = array[minMaxIndex];
+      array[minMaxIndex] = temp;
   }
 
-  return arr.join('');
+  return array.join('');
 }

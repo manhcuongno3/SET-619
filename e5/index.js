@@ -1,14 +1,14 @@
 //5. Nhập một mảng số nguyên, sắp xếp và in ra.
-function sortArray(arr) {
-  let n = arr.length;
+function sortArray(array) {
+  let n = array.length;
   for (let i = 0; i < n - 1; i++) {
       for (let j = 0; j < n - i - 1; j++) {
-          if (arr[j] > arr[j + 1]) {
-              let temp = arr[j];
-              arr[j] = arr[j + 1];
-              arr[j + 1] = temp;
+          if (array[j] > array[j + 1]) {
+              let temp = array[j];
+              array[j] = array[j + 1];
+              array[j + 1] = temp;
           }
       }
   }
-  return arr;
+  return array;
 }

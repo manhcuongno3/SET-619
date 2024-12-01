@@ -3,12 +3,12 @@
 // b) Đếm số lần xuất hiện của một ký tự.
 // c) Tìm ký tự xuất hiện nhiều nhất.
 
-function countVowels(str) {
+function countVowels(string) {
   const vowels = "aeiouAEIOU";
   let count = 0;
   
-  for (let i = 0; i < str.length; i++) {
-      if (vowels.indexOf(str[i]) !== -1) {
+  for (let i = 0; i < string.length; i++) {
+      if (vowels.indexOf(string[i]) !== -1) {
           count++;
       }
   }
@@ -16,11 +16,11 @@ function countVowels(str) {
   return count;
 }
 
-function countCharOccurrences(str, char) {
+function countCharOccurrences(string, character) {
   let count = 0;
   
-  for (let i = 0; i < str.length; i++) {
-      if (str[i] === char) {
+  for (let i = 0; i < string.length; i++) {
+      if (string[i] === character) {
           count++;
       }
   }
@@ -28,14 +28,14 @@ function countCharOccurrences(str, char) {
   return count;
 }
 
-function findMostFrequentChar(str) {
+function findMostFrequentChar(string) {
   let maxCount = 0;
   let maxChar = '';
   
-  for (let i = 0; i < str.length; i++) {
-      let currentChar = str[i];
+  for (let i = 0; i < string.length; i++) {
+      let currentChar = string[i];
       
-      let count = countCharOccurrences(str, currentChar);
+      let count = countCharOccurrences(string, currentChar);
       
       if (count > maxCount) {
           maxCount = count;
